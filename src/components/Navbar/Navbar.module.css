@@ -1,0 +1,15 @@
+.nav {
+    grid-area: n; 
+    background-image: linear-gradient(180deg, var(--accent-color), var(--main-color));
+}
+.nav ul {
+    list-style-type: none;
+}
+.item {
+    color: #fff;
+    text-decoration: none;
+}
+.item.active {
+    color: gold;
+}
+  
