@@ -9,6 +9,10 @@
   grid-template-columns: 2fr 10fr;
   gap: 10px;
 }
+.app-wrapper-content {
+  grid-area: c; 
+  background-color: #ddd;
+}
 :root {
   --main-color: #dbbee8;
   --accent-color: #9bbced;
