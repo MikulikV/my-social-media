@@ -1,19 +1,19 @@
-.dialogs {
+.messages {
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
-.dialogsItems {
-    padding: 10px;
-}
-.dialog {
-
-}
-.dialog.active {
-    color: var(--accent-color);
-}
-.messages {
+.messagesItems {
     padding: 10px;
 }
 .message {
+
+}
+.message.active {
+    color: var(--accent-color);
+}
+.dialogues {
+    padding: 10px;
+}
+.dialogue {
 
 }
