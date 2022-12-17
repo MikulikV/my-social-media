@@ -1,40 +1,24 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import s from './Messages.module.css';
+import React from "react";
+import Dialogue from "./Dialogue/Dialogue";
+import Message from "./Message/Message";
+import s from "./Messages.module.css";
+
 
 const Messages = (props) => {
-    return (
-        <div className={s.messages}>
-            <div className={s.messagesItems}>
-                <div className={s.message + ' ' + s.active}>
-                    <NavLink to='/messages/1'>Vadim</NavLink>
-                </div>
-                <div className={s.message}>
-                    <NavLink to='/messages/2'>Dinara</NavLink>
-                </div>
-                <div className={s.message}>
-                    <NavLink to='/messages/3'>Violetta</NavLink>
-                </div>
-                <div className={s.message}>
-                    <NavLink to='/messages/4'>Igor</NavLink>
-                </div>
-                <div className={s.message}>
-                    <NavLink to='/messages/5'>Mom</NavLink>
-                </div>
-            </div>
-            <div className={s.dialogues}>
-                <div className={s.dialogue}>
-                    Hi, how are you?
-                </div>
-                <div className={s.dialogue}>
-                    Are you at home?
-                </div>
-                <div className={s.dialogue}>
-                    When is our appointment
-                </div>
-            </div>
+
+  let dialoguesElements = props.dialogues.map( d => <Dialogue name={d.name} id={d.id} />);
+  let messagesElements = props.messages.map( m => <Message message={m.message} />);
+
+  return (
+    <div className={s.dialogues}>
+      <div className={s.dialoguesItems}>
+        { dialoguesElements }
         </div>
-    );
-}
+      <div className={s.messages}>
+        { messagesElements }
+        </div>
+    </div>
+  );
+};
 
 export default Messages;
