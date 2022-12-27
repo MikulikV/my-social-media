@@ -14,11 +14,11 @@ function App(props) {
         <Routes>
           <Route
             path="/profile"
-            element={<Profile profilePage={props.state.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText} />}
+            element={<Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />}
           />
           <Route
             path="/messages/*"
-            element={<Messages messagesPage={props.state.messagesPage} addMessage={props.addMessage} updateNewMessageText={props.updateNewMessageText} />}
+            element={<Messages messagesPage={props.state.messagesPage} dispatch={props.dispatch} />}
           />
         </Routes>
       </div>
