@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Messages from "./components/Messages/Messages";
+import MessagesContainer from "./components/Messages/MessagesContainer";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
@@ -14,11 +14,11 @@ function App(props) {
         <Routes>
           <Route
             path="/profile"
-            element={<Profile profilePage={props.state.profilePage} dispatch={props.dispatch} />}
+            element={<Profile store={props.store} />}
           />
           <Route
             path="/messages/*"
-            element={<Messages messagesPage={props.state.messagesPage} dispatch={props.dispatch} />}
+            element={<MessagesContainer store={props.store} />}
           />
         </Routes>
       </div>

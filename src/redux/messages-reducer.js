@@ -15,7 +15,7 @@ let initialState = {
     { id: 3, message: "When is our appointment?" },
     { id: 4, message: "What's the matter with you, my friend?" },
   ],
-  newMessageText: "",
+  newMessageText: "Hey",
 };
 
 const messagesReducer = (state = initialState, action) => {

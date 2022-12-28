@@ -1,5 +1,4 @@
 import React from "react";
-import { sendMessageActionCreator, updateNewMessageTextActionCreator } from "../../redux/messages-reducer";
 import Dialogue from "./Dialogue/Dialogue";
 import Message from "./Message/Message";
 import s from "./Messages.module.css";
@@ -14,13 +13,13 @@ const Messages = (props) => {
 
   let newMessageElement = React.createRef();
 
-  let sendMessage = () => {
-    props.dispatch(sendMessageActionCreator());
+  let onSendMessage = () => {
+    props.sendMessage();
   };
 
   let onMessageChange = (e) => {
     let text = e.target.value;
-    props.dispatch(updateNewMessageTextActionCreator(text));
+    props.updateNewMessage(text);
   };
 
   return (
@@ -38,7 +37,7 @@ const Messages = (props) => {
               />
             </div>
             <div>
-              <button onClick={sendMessage}>Send message</button>
+              <button onClick={onSendMessage}>Send message</button>
             </div>
           </div>
         </div>
