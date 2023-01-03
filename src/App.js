@@ -4,22 +4,18 @@ import MessagesContainer from "./components/Messages/MessagesContainer";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
+import UsersContainer from "./components/Users/UsersContainer";
 
-function App(props) {
+function App() {
   return (
     <div className="app-wrapper">
       <Header />
-      <Navbar state={props.state.friendsPage} />
+      <Navbar />
       <div className="app-wrapper-content">
         <Routes>
-          <Route
-            path="/profile"
-            element={<Profile store={props.store} />}
-          />
-          <Route
-            path="/messages/*"
-            element={<MessagesContainer store={props.store} />}
-          />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/messages/*" element={<MessagesContainer />} />
+          <Route path="/users" element={<UsersContainer />} />
         </Routes>
       </div>
     </div>

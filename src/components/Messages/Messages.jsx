@@ -5,10 +5,10 @@ import s from "./Messages.module.css";
 
 const Messages = (props) => {
   let dialoguesElements = props.messagesPage.dialogues.map((d) => (
-    <Dialogue name={d.name} id={d.id} />
+    <Dialogue name={d.name} id={d.id} key={d.id} />
   ));
   let messagesElements = props.messagesPage.messages.map((m) => (
-    <Message message={m.message} />
+    <Message message={m.message} key={m.id} />
   ));
 
   let newMessageElement = React.createRef();

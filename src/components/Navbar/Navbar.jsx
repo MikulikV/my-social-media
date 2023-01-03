@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Friends from "../Friends/Friends";
 import s from "./Navbar.module.css";
 
 const setClass = ({ isActive }) => (isActive ? s.activeLink : s.item);
@@ -36,15 +35,12 @@ const Navbar = (props) => {
             </NavLink>
           </li>
           <li className={s.item}>
-            <NavLink to="/friends" className={setClass}>
-              Friends
+            <NavLink to="/users" className={setClass}>
+              Find users
             </NavLink>
           </li>
         </ul>
       </nav>
-      <div className={s.friends}>
-        <Friends state={props.state} />
-      </div>
     </div>
   );
 };
