@@ -1,12 +1,13 @@
 import React from "react";
 import s from "./User.module.css";
+import userPhoto from "../../../assets/images/user.png"
 
 const User = (props) => {
   return (
     <div className={s.item}>
       <div>
         <div>
-          <img src={props.photoUrl} alt="ava" />
+          <img src={ props.photos.small != null ? props.photos.small : userPhoto} alt="ava" />
         </div>
         <div>
           {props.followed ? (
@@ -34,8 +35,8 @@ const User = (props) => {
           <div>{props.status}</div>
         </div>
         <div>
-          <div>{props.location.country}</div>
-          <div>{props.location.city}</div>
+          <div>props.location.country</div>
+          <div>props.location.city</div>
         </div>
       </div>
     </div>

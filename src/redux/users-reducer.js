@@ -3,7 +3,36 @@ const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET-USERS";
 
 let initialState = {
-  users: [],
+  users: [ // props.setUsers([
+    //   {
+    //     id: 1,
+    //     photoUrl:
+    //       "https://variety.com/wp-content/uploads/2022/02/Screen-Shot-2022-05-09-at-10.04.13-AM.png",
+    //     fullName: "Vadim",
+    //     followed: true,
+    //     status: "I am front-end developer",
+    //     location: { city: "Ufa", country: "Russia" },
+    //   },
+    //   {
+    //     id: 2,
+    //     photoUrl:
+    //       "https://variety.com/wp-content/uploads/2022/02/Screen-Shot-2022-05-09-at-10.04.13-AM.png",
+    //     fullName: "Dinara",
+    //     followed: true,
+    //     status: "I am buyer from Turkey",
+    //     location: { city: "Istanbul", country: "Turkey" },
+    //   },
+    //   {
+    //     id: 3,
+    //     photoUrl:
+    //       "https://variety.com/wp-content/uploads/2022/02/Screen-Shot-2022-05-09-at-10.04.13-AM.png",
+    //     fullName: "Violetta",
+    //     followed: false,
+    //     status: "I am doctor",
+    //     location: { city: "Moscow", country: "Russia" },
+    //   },
+    // ])
+  ],
 };
 
 const usersReducer = (state = initialState, action) => {
