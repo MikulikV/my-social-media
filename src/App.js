@@ -3,8 +3,8 @@ import "./App.css";
 import MessagesContainer from "./components/Messages/MessagesContainer";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
-import Profile from "./components/Profile/Profile";
 import UsersContainer from "./components/Users/UsersContainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 
 function App() {
   return (
@@ -13,7 +13,10 @@ function App() {
       <Navbar />
       <div className="app-wrapper-content">
         <Routes>
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/">
+            <Route path="" element={<ProfileContainer />} />
+            <Route path=":userId" element={<ProfileContainer />} />
+          </Route>
           <Route path="/messages/*" element={<MessagesContainer />} />
           <Route path="/users" element={<UsersContainer />} />
         </Routes>

@@ -1,9 +1,9 @@
 import React from "react";
-import s from "./Post.module.css";
+import styles from "./Post.module.css";
 
 const Post = (props) => {
   return (
-    <div className={s.item}>
+    <div className={styles.item}>
       <img src="https://variety.com/wp-content/uploads/2022/02/Screen-Shot-2022-05-09-at-10.04.13-AM.png" alt="ava"/>
       { props.message }
       <div>

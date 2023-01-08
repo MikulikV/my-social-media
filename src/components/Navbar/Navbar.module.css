@@ -6,9 +6,13 @@
 .nav ul {
     list-style-type: none;
 }
+.item {
+    margin-bottom: 5px;
+}
 .item a {
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
 }
 .item a.activeLink {
     color: gold;

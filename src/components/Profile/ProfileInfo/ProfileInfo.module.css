@@ -4,4 +4,29 @@
 }
 .descriptionBlock {
     padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+.avatar img {
+    width: 200px;
+}
+.name {
+    margin: 0;
+}
+.lookForAJob{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.lookForAJobPicture {
+    width: 70px;
+}
+.contacts {
+    display: flex;
+    gap: 20px;
+}
+.contactLink {
+    text-decoration: none;
+    color: #000;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Dialogue from "./Dialogue/Dialogue";
 import Message from "./Message/Message";
-import s from "./Messages.module.css";
+import styles from "./Messages.module.css";
 
 const Messages = (props) => {
   let dialoguesElements = props.messagesPage.dialogues.map((d) => (
@@ -23,11 +23,11 @@ const Messages = (props) => {
   };
 
   return (
-    <div className={s.dialogues}>
-      <div className={s.dialoguesItems}>{dialoguesElements}</div>
+    <div className={styles.dialogues}>
+      <div className={styles.dialoguesItems}>{dialoguesElements}</div>
       <div>
-        <div className={s.messages}>
-          <div>{messagesElements}</div>
+        <div className={styles.messages}>
+          <div className={styles.messagesItems}>{messagesElements}</div>
           <div>
             <div>
               <textarea

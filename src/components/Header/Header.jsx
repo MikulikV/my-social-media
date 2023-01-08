@@ -1,10 +1,11 @@
 import React from 'react';
-import s from './Header.module.css';
+import styles from './Header.module.css';
+import logo from '../../assets/images/logo.svg'
 
 const Header = () => {
     return (
-        <header className={s.header}>
-            <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/V-logo.svg/2048px-V-logo.svg.png' />
+        <header className={styles.header}>
+            <img src={logo} alt=''/>
         </header>
     );
 }
