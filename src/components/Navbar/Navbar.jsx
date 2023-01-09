@@ -6,8 +6,8 @@ const setClass = ({ isActive }) => (isActive ? styles.activeLink : styles.item);
 
 const Navbar = (props) => {
   return (
-    <div className={styles.nav}>
-      <nav>
+    <div className={styles.navbar}>
+      <nav className={styles.nav}>
         <ul>
           <li className={styles.item}>
             <NavLink to="/profile" className={setClass}>

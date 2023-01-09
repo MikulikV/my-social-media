@@ -1,10 +1,18 @@
-.nav {
-    padding: 20px;
+.navbar {
+    margin: 0;
     grid-area: n; 
     background-image: linear-gradient(180deg, var(--accent-color), var(--main-color));
+    min-height: 800px;
+}
+.nav {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
 }
 .nav ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
 }
 .item {
     margin-bottom: 5px;

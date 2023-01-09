@@ -1,9 +1,23 @@
 .header {
     grid-area: h; 
     background-image: linear-gradient(90deg, var(--accent-color), var(--main-color));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
-.header img {
+.logo img {
     width: 40px;
     height: 40px;
-    padding: 10px;
+    cursor: pointer;
+}
+.loginBlock {
+    color: gold;
+    font-size: 20px;
+    cursor: pointer;
+}
+.loginBlock a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
 }
