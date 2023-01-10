@@ -1,13 +1,18 @@
 import React from "react";
 import styles from "./Post.module.css";
+import userPhoto from "../../../../assets/images/user.png";
 
 const Post = (props) => {
   return (
     <div className={styles.item}>
-      <img src="https://variety.com/wp-content/uploads/2022/02/Screen-Shot-2022-05-09-at-10.04.13-AM.png" alt="ava"/>
-      { props.message }
+      <div className={styles.post}>
+        <div className={styles.postAvatar}>
+          <img src={userPhoto} alt="ava" />
+        </div>
+        <div className={styles.postText}>{props.message}</div>
+      </div>
       <div>
-        <span>like</span> { props.likesCount }
+        <span>like</span> {props.likesCount}
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Users.module.css";
 import userPhoto from "../../assets/images/user.png";
 import { NavLink } from "react-router-dom";
-import { followAPI } from "../../api/api";
 
 const Users = (props) => {
   let pagesCount = Math.ceil(props.usersTotalCount / props.pageSize);
@@ -53,38 +52,28 @@ const Users = (props) => {
             <div>
               {u.followed ? (
                 <button
+                  disabled={props.followingInProgress.some((id) => id === u.id)}
                   onClick={() => {
-                    followAPI.unfollowUser(u.id)
-                      .then((data) => {
-                        if (data.resultCode === 0) {
-                          props.unfollow(u.id);
-                        }
-                      });
+                    props.unfollow(u.id);
                   }}
-                >Unfollow</button>
+                >
+                  Unfollow
+                </button>
               ) : (
                 <button
+                  disabled={props.followingInProgress.some((id) => id === u.id)}
                   onClick={() => {
-                    followAPI.followUser(u.id)
-                      .then((data) => {
-                        if (data.resultCode === 0) {
-                          props.follow(u.id);
-                        }
-                      });
+                    props.follow(u.id);
                   }}
-                >Follow</button>
+                >
+                  Follow
+                </button>
               )}
             </div>
           </div>
           <div className={styles.info}>
-            <div>
-              <div>{u.name}</div>
-              <div>{u.status}</div>
-            </div>
-            <div className={styles.location}>
-              <div>u.location.country</div>
-              <div>u.location.city</div>
-            </div>
+            <h4 className={styles.userName}>{u.name}</h4>
+            <p>{u.status}</p>
           </div>
         </div>
       ))}

@@ -1,5 +1,5 @@
 .app-wrapper {
-  width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: grid;
   grid-template-areas: 
@@ -16,4 +16,18 @@
 :root {
   --main-color: #dbbee8;
   --accent-color: #9bbced;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+textarea {
+  padding: 5px;
+}
+button {
+  padding: 5px 10px;
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
+  cursor: pointer;
 }

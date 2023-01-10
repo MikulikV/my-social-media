@@ -1,4 +1,5 @@
 .usersPages {
+    padding: 10px 0 0 10px;
     margin-bottom: 20px;
 }
 .item img {
@@ -9,28 +10,25 @@
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
+    align-items: center;
 }
 .itemButton {
     width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .info {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+}
+.userName {
+    margin-bottom: 10px;
 }
 .pageNumber, .selectedPage {
     cursor: pointer;
     font-size: 16px;
-    padding-right: 10px;
-    margin-bottom: 20px;
+    margin: 0 10px 20px 0;
 }
 .selectedPage {
     font-weight: bold;
 }
-.location {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-button {
-    cursor: pointer;
-}
+

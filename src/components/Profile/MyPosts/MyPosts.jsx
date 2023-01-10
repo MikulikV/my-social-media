@@ -20,10 +20,10 @@ const MyPosts = (props) => {
 
   return (
     <div className={styles.postsBlock}>
-      <h3>My Posts</h3>
-      <div>
+      <h3 className={styles.postsTitle}>My Posts</h3>
+      <div className={styles.inputBlock}>
         <div>
-          <textarea
+          <textarea className={styles.postsTextarea}
             onChange={onPostChange}
             ref={newPostElement}
             value={props.profilePage.newPostText}

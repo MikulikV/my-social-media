@@ -36,8 +36,8 @@ const ProfileInfo = (props) => {
           <h2 className={styles.name}>{props.profile.fullName}</h2>
           <h3 className={styles.about}>{props.profile.aboutMe}</h3>
           <div className={styles.lookForAJob}>
-            <img className={styles.lookForAJobPicture} src={props.profile.lookingForAJob ? job : null} alt="" />
-            <p>{props.profile.lookingForAJobDescription}</p>
+            {props.profile.lookingForAJob ? <img className={styles.lookForAJobPicture} src={job} alt="" /> : null}
+            <p className={styles.lookForAJobText}>{props.profile.lookingForAJobDescription}</p>
           </div>
           <div className={styles.contacts}>{(profileContacts(props.profile.contacts).length > 0) ? "My contacts:" : null }{profileContacts(props.profile.contacts)}</div>
         </div>
